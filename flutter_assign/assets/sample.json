@@ -1,0 +1,232 @@
+{
+	"info": {
+		"_postman_id": "c98ccadd-5505-445b-b581-aaa6d9681639",
+		"name": "Digitalflake-Hackathon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19517467"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "pankaj@digitalflake.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pankaj@123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/login",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "pankaj@digitalflake.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Pankaj Jadhav",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/create_account",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"create_account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_slots",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/get_slots?date=2023-05-01",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"get_slots"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-05-01"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_availability",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/get_availability?date=2023-05-01&slot_id=2&type=1",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"get_availability"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2023-05-01"
+						},
+						{
+							"key": "slot_id",
+							"value": "2"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"description": "1 = Desks, 2 = Meeting Rooms"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirm_booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "2023-05-01",
+							"type": "text"
+						},
+						{
+							"key": "slot_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "workspace_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "1",
+							"description": "1 = Desks, 2 = Meeting Rooms",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/confirm_booking",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"confirm_booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_bookings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo0413095.mockable.io/digitalflake/api/get_bookings?user_id=1",
+					"protocol": "https",
+					"host": [
+						"demo0413095",
+						"mockable",
+						"io"
+					],
+					"path": [
+						"digitalflake",
+						"api",
+						"get_bookings"
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
